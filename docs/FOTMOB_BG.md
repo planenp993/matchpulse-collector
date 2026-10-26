@@ -1,9 +1,22 @@
-# FotMob experiment
+# MATCHPULSE → FotMob experimental check
 
-Added `scripts/fotmob_adapter.py` and unit tests. This is an **offline parser** for locally supplied, authorized FotMob-format match statistics. It does not contact FotMob or schedule any scraping.
+**Не е включено редовно теглене от FotMob.** FotMob забранява
+роботи и системно/редовно автоматично използване в условията си:
+https://www.fotmob.com/
 
-FotMob has explicitly objected to unauthorized automated retrieval: https://github.com/probberechts/soccerdata/issues/918
+Експериментална диагностика: scripts/fotmob_probe.py.
+- Един опит към известния неофициален адрес за програма за деня.
+- При успех: максимум една допълнителна заявка за статистиките на завършен мач.
+- Без повторни опити, заобикаляне на отказ, проксита, браузърни маскировки, токени.
+- Извличат се само удари, точни удари, xG, корнери, картони и владение.
+- Няма публикуване на сурови данни, непрекъсната синхронизация или промяна на основния MATCHPULSE.
+- Тестовете включват примерни *измислени* JSON записи и не доказват, че FotMob ще върне реални данни.
 
-Expected fields: xG, total shots, shots on target, corners, yellow/red cards and possession, where available. Missing fields remain missing. Parser shape is preliminary and must be validated against a permitted real export before production use.
+За реален автоматичен колектор ще е необходимо разрешение/лиценз или друг
+източник, който позволява системна автоматична употреба.
 
-The existing OpenFootball collector and SofaScore experiment remain unchanged. The main MATCHPULSE repository is not touched.
+След първото автоматично диагностично изпълнение виж
+https://github.com/planenp993/matchpulse-collector/actions/workflows/fotmob-probe.yml
+
+Имай предвид, че GitHub може да маркира общата задача като успешна дори
+ако FotMob откаже достъп: важен е отпечатаният JSON статус в логовете.
