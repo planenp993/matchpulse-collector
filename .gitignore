@@ -1,0 +1,6 @@
+# Provider data exports are private until permission and provenance are verified.
+local/
+private/
+data/sofascore_*.json
+*.pyc
+__pycache__/
