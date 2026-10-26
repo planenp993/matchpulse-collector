@@ -1,0 +1,36 @@
+name: Collect OpenFootball Data
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
+  workflow_dispatch:
+  schedule:
+    - cron: '25 06,18 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: isolated-collector
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Collect public CC0 data
+        run: python -m scripts.collector --online
+      - name: Commit snapshot to this repository only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update isolated football data [skip ci]'
+            git push origin HEAD:main
+          fi
