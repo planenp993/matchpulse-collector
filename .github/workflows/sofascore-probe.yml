@@ -1,0 +1,30 @@
+name: SofaScore Single Diagnostic (no retry)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sofascore_direct.py'
+      - 'tests/test_sofascore_direct.py'
+      - '.github/workflows/sofascore-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  one-small-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline tests first
+        run: python -m unittest discover -s tests -v
+      - name: One bounded direct test (one schedule and at most one stats call)
+        run: |
+          set +e
+          python -m scripts.sofascore_direct --mode probe --date 2026-10-26
+          CODE=$?
+          echo "Probe exit code: $CODE (2 means denied or unavailable)"
+          # Diagnostic result is visible, but provider denial is not a CI code failure.
+          exit 0
