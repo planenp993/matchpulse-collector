@@ -1,0 +1,24 @@
+name: Crosscheck Eight Leagues Against Independent Research CSVs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_independent_csv.py'
+      - 'tests/test_audit_independent_csv.py'
+      - '.github/workflows/audit-independent-csv.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify tests
+        run: python -m unittest discover -s tests -v
+      - name: Compare public indexes in eight leagues with research-only CSV results
+        run: python -m scripts.audit_independent_csv
