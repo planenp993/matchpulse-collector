@@ -1,13 +1,502 @@
 {
-  "schema_version": 1,
-  "date": "2026-10-27",
-  "completed_on_github": true,
-  "note": "Derived aggregate quality coverage. Audit program passed; automatic report push originally failed due concurrent workflow commit. This report was recovered from validated run logs.",
-  "source_run": "https://github.com/planenp993/matchpulse-collector/actions/runs/40467773437",
-  "scope": "All 18 published season indexes, 96 stratified detailed match samples. Statistics denominator is 96, not 1771.",
-  "all_individual_match_statistics_checked": false,
-  "commercial_import_authorized": false,
-  "production_import_enabled": false,
+  "scan": "all_index_rows_plus_stratified_detail_sample",
+  "full_match_statistics_completeness_proven": false,
+  "source_rights": "Cornerflick CC BY compilation; upstream rights unresolved",
+  "competitions": {
+    "Premier League": {
+      "slug": "premier-league",
+      "status": "ok",
+      "indexed": 80,
+      "index_qa": {
+        "counts": {
+          "records": 80,
+          "structurally_plausible": 80
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 4,
+        "shots": 6,
+        "on_target": 6,
+        "corners": 6,
+        "yellow": 6,
+        "red": 4,
+        "possession": 6
+      }
+    },
+    "La Liga": {
+      "slug": "la-liga",
+      "status": "ok",
+      "indexed": 99,
+      "index_qa": {
+        "counts": {
+          "records": 99,
+          "structurally_plausible": 99
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 4,
+        "shots": 6,
+        "on_target": 6,
+        "corners": 6,
+        "yellow": 6,
+        "red": 5,
+        "possession": 6
+      }
+    },
+    "Serie A": {
+      "slug": "serie-a",
+      "status": "ok",
+      "indexed": 80,
+      "index_qa": {
+        "counts": {
+          "records": 80,
+          "structurally_plausible": 80
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 6,
+        "shots": 6,
+        "on_target": 6,
+        "corners": 6,
+        "yellow": 6,
+        "red": 2,
+        "possession": 6
+      }
+    },
+    "Bundesliga": {
+      "slug": "bundesliga",
+      "status": "ok",
+      "indexed": 63,
+      "index_qa": {
+        "counts": {
+          "records": 63,
+          "structurally_plausible": 63
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 4,
+        "shots": 6,
+        "on_target": 6,
+        "corners": 6,
+        "yellow": 6,
+        "red": 5,
+        "possession": 6
+      }
+    },
+    "Ligue 1": {
+      "slug": "ligue-1",
+      "status": "ok",
+      "indexed": 72,
+      "index_qa": {
+        "counts": {
+          "records": 72,
+          "structurally_plausible": 72
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 4,
+        "shots": 6,
+        "on_target": 6,
+        "corners": 6,
+        "yellow": 6,
+        "red": 5,
+        "possession": 6
+      }
+    },
+    "Champions League": {
+      "slug": "champions-league",
+      "status": "ok",
+      "indexed": 144,
+      "index_qa": {
+        "counts": {
+          "records": 144,
+          "structurally_plausible": 144
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 2,
+        "shots": 3,
+        "on_target": 3,
+        "corners": 3,
+        "yellow": 3,
+        "red": 2,
+        "possession": 3
+      }
+    },
+    "Europa League": {
+      "slug": "europa-league",
+      "status": "ok",
+      "indexed": 134,
+      "index_qa": {
+        "counts": {
+          "records": 134,
+          "structurally_plausible": 134
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 3,
+        "shots": 3,
+        "on_target": 3,
+        "corners": 3,
+        "yellow": 3,
+        "red": 2,
+        "possession": 3
+      }
+    },
+    "Conference League": {
+      "slug": "conference-league",
+      "status": "ok",
+      "indexed": 294,
+      "index_qa": {
+        "counts": {
+          "records": 294,
+          "structurally_plausible": 294
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 1,
+        "shots": 2,
+        "on_target": 3,
+        "corners": 3,
+        "yellow": 3,
+        "red": 2,
+        "possession": 3
+      }
+    },
+    "Eredivisie": {
+      "slug": "eredivisie",
+      "status": "ok",
+      "indexed": 90,
+      "index_qa": {
+        "counts": {
+          "records": 90,
+          "structurally_plausible": 90
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 4,
+        "shots": 6,
+        "on_target": 6,
+        "corners": 6,
+        "yellow": 4,
+        "red": 5,
+        "possession": 6
+      }
+    },
+    "Süper Lig": {
+      "slug": "super-lig",
+      "status": "ok",
+      "indexed": 81,
+      "index_qa": {
+        "counts": {
+          "records": 81,
+          "structurally_plausible": 81
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 5,
+        "shots": 6,
+        "on_target": 6,
+        "corners": 6,
+        "yellow": 6,
+        "red": 3,
+        "possession": 6
+      }
+    },
+    "Saudi Pro League": {
+      "slug": "saudi-pro-league",
+      "status": "ok",
+      "indexed": 94,
+      "index_qa": {
+        "counts": {
+          "records": 94,
+          "structurally_plausible": 94
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 3,
+        "shots": 5,
+        "on_target": 5,
+        "corners": 5,
+        "yellow": 5,
+        "red": 3,
+        "possession": 5
+      }
+    },
+    "J1 League": {
+      "slug": "j1-league",
+      "status": "ok",
+      "indexed": 0,
+      "index_qa": {
+        "counts": {},
+        "examples": []
+      },
+      "sampled": 0,
+      "valid_sample": 0,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 0,
+        "shots": 0,
+        "on_target": 0,
+        "corners": 0,
+        "yellow": 0,
+        "red": 0,
+        "possession": 0
+      }
+    },
+    "AFC Champions League": {
+      "slug": "afc-champions-league",
+      "status": "ok",
+      "indexed": 41,
+      "index_qa": {
+        "counts": {
+          "records": 41,
+          "structurally_plausible": 41
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 3,
+        "shots": 4,
+        "on_target": 4,
+        "corners": 4,
+        "yellow": 4,
+        "red": 4,
+        "possession": 4
+      }
+    },
+    "Africa Cup of Nations": {
+      "slug": "africa-cup-of-nations",
+      "status": "ok",
+      "indexed": 0,
+      "index_qa": {
+        "counts": {},
+        "examples": []
+      },
+      "sampled": 0,
+      "valid_sample": 0,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 0,
+        "shots": 0,
+        "on_target": 0,
+        "corners": 0,
+        "yellow": 0,
+        "red": 0,
+        "possession": 0
+      }
+    },
+    "Copa Libertadores": {
+      "slug": "copa-libertadores",
+      "status": "ok",
+      "indexed": 28,
+      "index_qa": {
+        "counts": {
+          "records": 28,
+          "structurally_plausible": 28
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 4,
+        "shots": 6,
+        "on_target": 6,
+        "corners": 6,
+        "yellow": 6,
+        "red": 3,
+        "possession": 6
+      }
+    },
+    "Brasileirão": {
+      "slug": "brasileirao",
+      "status": "ok",
+      "indexed": 142,
+      "index_qa": {
+        "counts": {
+          "records": 142,
+          "structurally_plausible": 142
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 4,
+        "shots": 5,
+        "on_target": 5,
+        "corners": 5,
+        "yellow": 5,
+        "red": 3,
+        "possession": 5
+      }
+    },
+    "MLS": {
+      "slug": "mls",
+      "status": "ok",
+      "indexed": 248,
+      "index_qa": {
+        "counts": {
+          "records": 248,
+          "flagged": 17,
+          "country_in_club_competition": 17,
+          "structurally_plausible": 231
+        },
+        "examples": [
+          {
+            "id": "cornerflick:match:los-angeles-fc-vs-angola-mls-2026-10-26",
+            "home": "Los Angeles FC",
+            "away": "Angola",
+            "reasons": [
+              "country_in_club_competition"
+            ]
+          },
+          {
+            "id": "cornerflick:match:angola-vs-san-diego-mls-2026-10-18",
+            "home": "Angola",
+            "away": "San Diego",
+            "reasons": [
+              "country_in_club_competition"
+            ]
+          },
+          {
+            "id": "cornerflick:match:angola-vs-portland-timbers-mls-2026-10-15",
+            "home": "Angola",
+            "away": "Portland Timbers",
+            "reasons": [
+              "country_in_club_competition"
+            ]
+          },
+          {
+            "id": "cornerflick:match:st-louis-city-vs-angola-mls-2026-10-11",
+            "home": "St. Louis City",
+            "away": "Angola",
+            "reasons": [
+              "country_in_club_competition"
+            ]
+          },
+          {
+            "id": "cornerflick:match:angola-vs-colorado-rapids-mls-2026-09-27",
+            "home": "Angola",
+            "away": "Colorado Rapids",
+            "reasons": [
+              "country_in_club_competition"
+            ]
+          },
+          {
+            "id": "cornerflick:match:minnesota-united-fc-vs-angola-mls-2026-09-20",
+            "home": "Minnesota United FC",
+            "away": "Angola",
+            "reasons": [
+              "country_in_club_competition"
+            ]
+          },
+          {
+            "id": "cornerflick:match:angola-vs-seattle-sounders-mls-2026-09-13",
+            "home": "Angola",
+            "away": "Seattle Sounders",
+            "reasons": [
+              "country_in_club_competition"
+            ]
+          },
+          {
+            "id": "cornerflick:match:vancouver-whitecaps-vs-angola-mls-2026-09-10",
+            "home": "Vancouver Whitecaps",
+            "away": "Angola",
+            "reasons": [
+              "country_in_club_competition"
+            ]
+          }
+        ]
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 3,
+        "shots": 4,
+        "on_target": 4,
+        "corners": 4,
+        "yellow": 4,
+        "red": 3,
+        "possession": 4
+      }
+    },
+    "Primeira Liga": {
+      "slug": "primeira-liga",
+      "status": "ok",
+      "indexed": 81,
+      "index_qa": {
+        "counts": {
+          "records": 81,
+          "structurally_plausible": 81
+        },
+        "examples": []
+      },
+      "sampled": 6,
+      "valid_sample": 6,
+      "bad_sample": 0,
+      "metrics": {
+        "xg": 5,
+        "shots": 6,
+        "on_target": 6,
+        "corners": 6,
+        "yellow": 6,
+        "red": 3,
+        "possession": 6
+      }
+    }
+  },
   "totals": {
     "indexed": 1771,
     "flagged": 17,
@@ -22,132 +511,5 @@
     "metric_red": 54
   },
   "access_denied": false,
-  "leagues": {
-    "Premier League": {
-      "indexed": 80,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 4,
-      "status": "ok"
-    },
-    "La Liga": {
-      "indexed": 99,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 4,
-      "status": "ok"
-    },
-    "Serie A": {
-      "indexed": 80,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 6,
-      "status": "ok"
-    },
-    "Bundesliga": {
-      "indexed": 63,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 4,
-      "status": "ok"
-    },
-    "Ligue 1": {
-      "indexed": 72,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 4,
-      "status": "ok"
-    },
-    "Champions League": {
-      "indexed": 144,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 2,
-      "status": "ok"
-    },
-    "Europa League": {
-      "indexed": 134,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 3,
-      "status": "ok"
-    },
-    "Conference League": {
-      "indexed": 294,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 1,
-      "status": "ok"
-    },
-    "Eredivisie": {
-      "indexed": 90,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 4,
-      "status": "ok"
-    },
-    "Süper Lig": {
-      "indexed": 81,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 5,
-      "status": "ok"
-    },
-    "Saudi Pro League": {
-      "indexed": 94,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 3,
-      "status": "ok"
-    },
-    "J1 League": {
-      "indexed": 0,
-      "flagged": 0,
-      "sampled": 0,
-      "xg_present": 0,
-      "status": "ok"
-    },
-    "AFC Champions League": {
-      "indexed": 41,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 3,
-      "status": "ok"
-    },
-    "Africa Cup of Nations": {
-      "indexed": 0,
-      "flagged": 0,
-      "sampled": 0,
-      "xg_present": 0,
-      "status": "ok"
-    },
-    "Copa Libertadores": {
-      "indexed": 28,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 4,
-      "status": "ok"
-    },
-    "Brasileirão": {
-      "indexed": 142,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 4,
-      "status": "ok"
-    },
-    "MLS": {
-      "indexed": 248,
-      "flagged": 17,
-      "sampled": 6,
-      "xg_present": 3,
-      "status": "ok"
-    },
-    "Primeira Liga": {
-      "indexed": 81,
-      "flagged": 0,
-      "sampled": 6,
-      "xg_present": 5,
-      "status": "ok"
-    }
-  }
+  "production_ingestion_enabled": false
 }
