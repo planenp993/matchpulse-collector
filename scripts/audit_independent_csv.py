@@ -46,7 +46,13 @@ def clean(team):
 
 def close_team(a,b):
     a,b=clean(a),clean(b)
-    return a==b or difflib.SequenceMatcher(None,a,b).ratio() >= 0.78
+    if a==b:
+        return True
+    # A nearby name is never enough to collapse two Manchester teams,
+    # Real/Atletico clubs, or other near-name rivals into one identity.
+    if (a.startswith("manchester") or b.startswith("manchester")):
+        return False
+    return difflib.SequenceMatcher(None,a,b).ratio() >= 0.88
 
 def load_csv(folder):
     url=BASE_CSV+folder+"/results_2627.csv"
