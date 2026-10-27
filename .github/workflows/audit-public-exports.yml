@@ -1,0 +1,21 @@
+name: One-Time Public Football Dataset Audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_public_exports.py'
+      - '.github/workflows/audit-public-exports.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit-once:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect published CSV files without storing any records
+        run: python -m scripts.audit_public_exports
