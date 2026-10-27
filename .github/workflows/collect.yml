@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths-ignore:
       - 'data/**'
+      - 'reports/**'
   workflow_dispatch:
   schedule:
     - cron: '25 06,18 * * *'

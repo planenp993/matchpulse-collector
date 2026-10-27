@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-27",
+  "completed_on_github": true,
+  "note": "Derived aggregate quality coverage. Audit program passed; automatic report push originally failed due concurrent workflow commit. This report was recovered from validated run logs.",
+  "source_run": "https://github.com/planenp993/matchpulse-collector/actions/runs/40467773437",
+  "scope": "All 18 published season indexes, 96 stratified detailed match samples. Statistics denominator is 96, not 1771.",
+  "all_individual_match_statistics_checked": false,
+  "commercial_import_authorized": false,
+  "production_import_enabled": false,
+  "totals": {
+    "indexed": 1771,
+    "flagged": 17,
+    "sampled": 96,
+    "valid_sample": 96,
+    "metric_xg": 59,
+    "metric_shots": 80,
+    "metric_on_target": 81,
+    "metric_corners": 81,
+    "metric_yellow": 79,
+    "metric_possession": 81,
+    "metric_red": 54
+  },
+  "access_denied": false,
+  "leagues": {
+    "Premier League": {
+      "indexed": 80,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 4,
+      "status": "ok"
+    },
+    "La Liga": {
+      "indexed": 99,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 4,
+      "status": "ok"
+    },
+    "Serie A": {
+      "indexed": 80,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 6,
+      "status": "ok"
+    },
+    "Bundesliga": {
+      "indexed": 63,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 4,
+      "status": "ok"
+    },
+    "Ligue 1": {
+      "indexed": 72,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 4,
+      "status": "ok"
+    },
+    "Champions League": {
+      "indexed": 144,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 2,
+      "status": "ok"
+    },
+    "Europa League": {
+      "indexed": 134,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 3,
+      "status": "ok"
+    },
+    "Conference League": {
+      "indexed": 294,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 1,
+      "status": "ok"
+    },
+    "Eredivisie": {
+      "indexed": 90,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 4,
+      "status": "ok"
+    },
+    "Süper Lig": {
+      "indexed": 81,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 5,
+      "status": "ok"
+    },
+    "Saudi Pro League": {
+      "indexed": 94,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 3,
+      "status": "ok"
+    },
+    "J1 League": {
+      "indexed": 0,
+      "flagged": 0,
+      "sampled": 0,
+      "xg_present": 0,
+      "status": "ok"
+    },
+    "AFC Champions League": {
+      "indexed": 41,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 3,
+      "status": "ok"
+    },
+    "Africa Cup of Nations": {
+      "indexed": 0,
+      "flagged": 0,
+      "sampled": 0,
+      "xg_present": 0,
+      "status": "ok"
+    },
+    "Copa Libertadores": {
+      "indexed": 28,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 4,
+      "status": "ok"
+    },
+    "Brasileirão": {
+      "indexed": 142,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 4,
+      "status": "ok"
+    },
+    "MLS": {
+      "indexed": 248,
+      "flagged": 17,
+      "sampled": 6,
+      "xg_present": 3,
+      "status": "ok"
+    },
+    "Primeira Liga": {
+      "indexed": 81,
+      "flagged": 0,
+      "sampled": 6,
+      "xg_present": 5,
+      "status": "ok"
+    }
+  }
+}
